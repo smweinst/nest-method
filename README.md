@@ -1,1 +1,1 @@
-smweinst.github.io/nest-method
+link to website: https://smweinst.github.io/nest-method
