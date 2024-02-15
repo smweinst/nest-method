@@ -3,6 +3,14 @@ title: ""
 output: html_document
 ---
 
+<style type="text/css">
+.main-container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
 ## Network Enrichment Significance Testing in Brain-Phenotype Association Studies
 <!-- to do: list co-authors -->
 
