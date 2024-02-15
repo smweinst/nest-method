@@ -1,0 +1,30 @@
+---
+title: ""
+---
+
+```{r out.width='25%', out.extra='style="float:left; padding:20px"',echo = F}
+knitr::include_graphics("./attachments/picture.png")
+```
+
+<style type="text/css">
+.main-container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+#### 
+##### Hello! I'm an Assistant Professor of Biostatistics in the [Department of Epidemiology and Biostatistics](https://cph.temple.edu/departments-research/departments/department-epidemiology-and-biostatistics) at [Temple University College of Public Health](https://cph.temple.edu/).
+
+I mainly work on developing new statistical methods for analyzing neuroimaging data, motivated by applications in mental health, neurodevelopment, and neurodegenerative disease. I'm also involved in research across numerous areas as a statistical collaborator.
+
+Before joining the faculty at Temple, I was a PhD student at Penn, where I was a member of the Penn Statistics in Imaging and Visualization Center ([PennSIVE](https://www.dbeicoe.med.upenn.edu/pennsive)). I was also previously a data analyst at the [Hospital for Special Surgery](https://www.hss.edu/) and an undergrad at [Columbia](https://www.columbia.edu/).
+
+-----
+
+##### Interested in working together? Feel free to [reach out!](mailto:sarah.m.weinstein@temple.edu)
+
+I'm recruiting an [Epidemiology PhD](https://www.temple.edu/academics/degree-programs/epidemiology-phd-hp-epid-phd) student for Fall 2024. If you'd like to work together, please reach out to me directly in addition to submitting an application through [SOPHAS](https://sophas.aspph.org/).
+
+-----

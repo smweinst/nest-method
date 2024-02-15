@@ -1,0 +1,16 @@
+name: "smw-website"
+output_dir: "."
+navbar:
+  title: "Sarah M. Weinstein, PhD"
+  right:
+    - text: "CV"
+      href: ./cv.pdf
+    - icon: fa-graduation-cap
+      href: https://scholar.google.com/citations?user=3ZRRrNoAAAAJ&hl=en&oi=sra
+    - icon: fab fa-github
+      href: https://github.com/smweinst
+    - icon: fab fa-linkedin-in
+      href: https://linkedin.com/in/sarah-m-weinstein
+output:
+  html_document:
+    theme: journal
