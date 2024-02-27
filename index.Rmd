@@ -11,17 +11,42 @@ output: html_document
 }
 </style>
 
-## Network Enrichment Significance Testing in Brain-Phenotype Association Studies
+# Network Enrichment Significance Testing in Brain-Phenotype Association Studies
 <!-- to do: list co-authors -->
 
 [*Link to preprint*](https://www.biorxiv.org/content/10.1101/2023.11.10.566593v1)
 
 ### Software
-*Contributors:*  Bin Li, M.Eng., [Sarah Weinstein, Ph.D.](https://smweinst.github.io)
-<!-- Bin--feel free to add a website link/any other info! -->
 
-#### [Python](https://github.com/Bin-8258/NEST)
-<!-- [to do: add example implementation in python] -->
+Code is available for implementing NEST in both R and python on [GitHub](https://github.com/smweinst/NEST).
 
-#### [R package](https://github.com/smweinst/NEST)
-<!-- [to do: add example implementation in R] -->
+Contributors:
+
+- Bin Li, M.Eng, Computer Science PhD Candidate at Temple University
+
+- [Sarah Weinstein, Ph.D.](https://smweinst.github.io), Assistant Professor of Biostatistics at Temple University
+
+Feel free to reach out with any comments/questions!  
+
+### [NEST in python](https://github.com/smweinst/NEST/tree/main/Python)
+*Installation from command line:*
+<!-- Bin to update as needed -->
+```{python, include = T, eval = F, python.reticulate = F}
+pip install NEST
+```
+
+#### Tutorial in python
+[in progress]
+
+### [NEST in R](https://github.com/smweinst/NEST/tree/main/R)
+*Installation in R:*  
+```{r, include = T, eval = F}
+if (!require(devtools)){
+  install.packages("devtools")
+}
+devtools::install_github("smweinst/NEST")
+library(NEST)
+```
+
+#### Tutorial in R
+[in progress]

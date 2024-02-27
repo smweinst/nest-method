@@ -173,25 +173,49 @@ pre code {
 </style>
 <div
 id="network-enrichment-significance-testing-in-brain-phenotype-association-studies"
-class="section level2">
-<h2>Network Enrichment Significance Testing in Brain-Phenotype
-Association Studies</h2>
+class="section level1">
+<h1>Network Enrichment Significance Testing in Brain-Phenotype
+Association Studies</h1>
 <!-- to do: list co-authors -->
 <p><a
 href="https://www.biorxiv.org/content/10.1101/2023.11.10.566593v1"><em>Link
 to preprint</em></a></p>
 <div id="software" class="section level3">
 <h3>Software</h3>
-<p><em>Contributors:</em> Bin Li, M.Eng., <a
-href="https://smweinst.github.io">Sarah Weinstein, Ph.D.</a>
-<!-- Bin--feel free to add a website link/any other info! --></p>
-<div id="python" class="section level4">
-<h4><a href="https://github.com/Bin-8258/NEST">Python</a></h4>
-<!-- [to do: add example implementation in python] -->
+<p>Code is available for implementing NEST in both R and python on <a
+href="https://github.com/smweinst/NEST">GitHub</a>.</p>
+<p>Contributors:</p>
+<ul>
+<li><p>Bin Li, M.Eng, Computer Science PhD Candidate at Temple
+University</p></li>
+<li><p><a href="https://smweinst.github.io">Sarah Weinstein, Ph.D.</a>,
+Assistant Professor of Biostatistics at Temple University</p></li>
+</ul>
+<p>Feel free to reach out with any comments/questions!</p>
 </div>
-<div id="r-package" class="section level4">
-<h4><a href="https://github.com/smweinst/NEST">R package</a></h4>
-<!-- [to do: add example implementation in R] -->
+<div id="nest-in-python" class="section level3">
+<h3><a href="https://github.com/smweinst/NEST/tree/main/Python">NEST in
+python</a></h3>
+<p><em>Installation from command line:</em>
+<!-- Bin to update as needed --></p>
+<pre class="python"><code>pip install NEST</code></pre>
+<div id="tutorial-in-python" class="section level4">
+<h4>Tutorial in python</h4>
+<p>[in progress]</p>
+</div>
+</div>
+<div id="nest-in-r" class="section level3">
+<h3><a href="https://github.com/smweinst/NEST/tree/main/R">NEST in
+R</a></h3>
+<p><em>Installation in R:</em></p>
+<pre class="r"><code>if (!require(devtools)){
+  install.packages(&quot;devtools&quot;)
+}
+devtools::install_github(&quot;smweinst/NEST&quot;)
+library(NEST)</code></pre>
+<div id="tutorial-in-r" class="section level4">
+<h4>Tutorial in R</h4>
+<p>[in progress]</p>
 </div>
 </div>
 </div>
