@@ -198,7 +198,23 @@ Assistant Professor of Biostatistics at Temple University</p></li>
 python</a></h3>
 <p><em>Installation from command line:</em>
 <!-- Bin to update as needed --></p>
+<p>Install requirement dependents,</p>
+<pre class="bash"><code>pip3 install scipy sklearn pandas matplotlib nibabel nilearn hcp_utils</code></pre>
+<p>Then install the NEST via pip,</p>
 <pre class="python"><code>pip install NEST</code></pre>
+<p>Run the NEST method. An example is shown below,</p>
+<pre class="python"><code>from nest-sw import nest
+
+args = {
+    &#39;X&#39;: data,
+    &#39;y&#39;: phenotype,
+    &#39;Z&#39;: covariate,
+    &#39;type&#39;: &#39;coef&#39;,
+    &#39;FL&#39;: False,
+    &#39;getNull&#39;: True,
+    &#39;n_perm&#39;: 5
+}
+pval,ES_obs,ES_null,running_sum = nest(statFun=&#39;lm&#39;,args=args,net_maps=net_6,n_cores=1,seed=123)</code></pre>
 <div id="tutorial-in-python" class="section level4">
 <h4>Tutorial in python</h4>
 <p>[in progress]</p>
