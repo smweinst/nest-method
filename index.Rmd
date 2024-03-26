@@ -46,8 +46,6 @@ Congradulations! The NES has been successfully installed.
 
 #### Tutorial in Python
 
-
-
 ##### Step 1: import the NEST package after the installation.
 ```{python, include = T, eval = F, python.reticulate = F}
 from nest-sw import nest
@@ -77,6 +75,7 @@ print('The p-value from tests of enrichment is', output[0])
 # output[1]: observed enrichment score
 # output[2]: enrichment score for null distribution
 ```
+##### Full codes are available [here](https://github.com/smweinst/NEST/blob/main/Python/example.py).
 
 ### [NEST in R](https://github.com/smweinst/NEST/tree/main/R)
 *Installation in R:*  
