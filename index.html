@@ -202,22 +202,56 @@ python</a></h3>
 <pre class="bash"><code>pip3 install scipy sklearn pandas matplotlib nibabel nilearn hcp_utils</code></pre>
 <p>Then install the NEST via pip,</p>
 <pre class="python"><code>pip install NEST</code></pre>
-<p>Run the NEST method. An example is shown below,</p>
-<pre class="python"><code>from nest-sw import nest
-
-args = {
-    &#39;X&#39;: data,
-    &#39;y&#39;: phenotype,
-    &#39;Z&#39;: covariate,
-    &#39;type&#39;: &#39;coef&#39;,
-    &#39;FL&#39;: False,
-    &#39;getNull&#39;: True,
-    &#39;n_perm&#39;: 5
-}
-pval,ES_obs,ES_null,running_sum = nest(statFun=&#39;lm&#39;,args=args,net_maps=net_6,n_cores=1,seed=123)</code></pre>
+<p>Congradulations! The NES has been successfully installed.</p>
 <div id="tutorial-in-python" class="section level4">
-<h4>Tutorial in python</h4>
-<p>[in progress]</p>
+<h4>Tutorial in Python</h4>
+<div id="step-1-import-the-nest-package-after-the-installation."
+class="section level5">
+<h5>Step 1: import the NEST package after the installation.</h5>
+<pre class="python"><code>from nest-sw import nest</code></pre>
+</div>
+<div
+id="step-2-preparing-the-data-and-define-the-following-dictionary-of-arguments-passed-to-the-nest-method.-the-args-can-be-defined-as"
+class="section level5">
+<h5>Step 2: Preparing the data and define the following dictionary of
+arguments passed to the nest method. The args can be defined as</h5>
+<pre class="python"><code>args = {
+    &#39;X&#39;: data,  # Hypothetical predictor variables, e.g., the 2-D brain-scan imaging data shaped as (sample_size, feature_size) in a numpy array format.
+    &#39;y&#39;: phenotype, # Hypothetical response variable, e.g., phenotypic data for samples corresponding to images, shaped as (sample_size, 1).
+    &#39;Z&#39;: covariate,  # Optionally specifying covariates, set to NULL here if you want to explicitly state no covariates.
+    &#39;FL&#39;: False,  # Optional, set to True to use Freedman-Lane permutation.
+    &#39;getNull&#39;: True,  # Optional, defult is True to explicitly stating to get a null distribution.
+    &#39;n_perm&#39;: 5   # Optional, default is 999. Override to specify the number of permutations. 
+}</code></pre>
+</div>
+<div
+id="step-3-loading-the-labels-of-networks-corresponding-to-each-location-in-x-shaped-as-a-binary-array-feature_size-for-a-specific-parcellation.-e.g.-the-default-network-from-yeo-et-al."
+class="section level5">
+<h5>Step 3: Loading the labels of networks corresponding to each
+location in X, shaped as a binary array (feature_size,) for a specific
+parcellation. e.g., the default network from <a
+href="https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation">yeo
+et al</a>.</h5>
+</div>
+<div
+id="the-label-should-be-assigned-like-network_labels-load_label_data-if-you-have-a-function-called-load_label_data-to-read-labels-from-files."
+class="section level5">
+<h5>The label should be assigned like ‘network_labels =
+load_label_data()’ if you have a function called load_label_data() to
+read labels from files.</h5>
+</div>
+<div id="step-4-calling-the-nest-method-and-get-a-list-of-return-values"
+class="section level5">
+<h5>Step 4: Calling the NEST method and get a list of return
+values:</h5>
+<pre class="python"><code>output = nest(statFun=&#39;lm&#39;,args=args,net_maps=network_labels)
+
+print(&#39;The p-value from tests of enrichment is&#39;, output[0])
+
+# output[0]: p-value
+# output[1]: observed enrichment score
+# output[2]: enrichment score for null distribution</code></pre>
+</div>
 </div>
 </div>
 <div id="nest-in-r" class="section level3">
