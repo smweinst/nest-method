@@ -87,7 +87,7 @@ print('p-value:', output[0])
 # output[2]: enrichment scores for null distribution
 ```
 
-##### Python code is available [here](https://github.com/smweinst/NEST/blob/main/Python/example.py).
+##### Python code is available [here](https://github.com/smweinst/NEST/blob/main/Python/example.ipynb).
 
 ### [NEST in R](https://github.com/smweinst/NEST/tree/main/R)
 *Installation in R:*  
