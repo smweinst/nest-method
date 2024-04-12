@@ -184,7 +184,7 @@ to preprint</em></a></p>
 <h3>Software</h3>
 <p>Code is available for implementing NEST in both R and python on <a
 href="https://github.com/smweinst/NEST">GitHub</a>.</p>
-<p>Contributors:</p>
+<p>Software contributors:</p>
 <ul>
 <li><p><a
 href="https://www.linkedin.com/in/bin-li-9261521b3/?locale=en_US">Bin
@@ -196,94 +196,67 @@ Assistant Professor of Biostatistics at Temple University</p></li>
 <p>Feel free to reach out with any comments/questions!</p>
 </div>
 <div id="nest-in-python" class="section level3">
-<h3><a href="https://github.com/smweinst/NEST/tree/main/Python">NEST in
-python</a></h3>
-<p><em>Installation from command line:</em></p>
-<p>Install requirement dependents,</p>
+<h3>NEST in python</h3>
+<p><em>Installation from command line</em>:</p>
+<p>First install dependents:</p>
 <pre class="bash"><code>pip3 install scipy sklearn pandas matplotlib nibabel nilearn hcp_utils</code></pre>
-<p>Then install the NEST via pip,</p>
+<p>Then install NEST:</p>
 <pre class="python"><code>pip install NEST</code></pre>
-<p>Congratulations! The NEST has been successfully installed.</p>
-<div id="tutorial-in-python" class="section level4">
-<h4>Tutorial in Python</h4>
-<div id="step-1-import-the-nest-package-after-the-installation."
-class="section level5">
-<h5>Step 1: import the NEST package after the installation.</h5>
-<pre class="python"><code>from nest-sw import nest</code></pre>
+<div id="source-code-in-python-is-available-here."
+class="section level4">
+<h4>Source code in python is available <a
+href="https://github.com/smweinst/NEST/tree/main/Python">here</a>.</h4>
 </div>
-<div
-id="step-2-preparing-the-data-and-define-the-following-dictionary-of-arguments-passed-to-the-nest-method.-the-args-can-be-defined-as-follows-assuming-vertex-wise-linear-models-will-be-fit-to-estimate-local-brain-phenotype-associations-i.e.-specifying-statfunlm-in-step-4.."
-class="section level5">
-<h5>Step 2: Preparing the data and define the following dictionary of
-arguments passed to the nest method. The args can be defined as follows,
-assuming vertex-wise linear models will be fit to estimate local
-brain-phenotype associations (i.e., specifying <code>statFun='lm'</code>
-in step 4.).</h5>
-<pre class="python"><code>args_lm = {
-    &#39;X&#39;: data,
-    &#39;y&#39;: phenotype,
-    &#39;Z&#39;: covariate, 
-    &#39;FL&#39;: False,
-    &#39;n_perm&#39;: 999
-}</code></pre>
-<p>Arguments to be included for <code>statFun='lm'</code>:</p>
-<ul>
-<li><p><code>X</code>: <em>N</em> x <em>P</em> matrix (numpy array) of
-<em>P</em> imaging features (e.g., vertices) for <em>N</em>
-participants</p></li>
-<li><p><code>y</code>: <em>N</em>-dimensional vector of phenotype of
-interest (i.e., testing enrichment of <em>X</em>-<em>y</em>
-associations)</p></li>
-<li><p><code>Z</code>: Optional. Specify one or more covariates (matrix
-with N rows and <em>q</em> columns for <em>q</em> covariates). Default
-is <code>NULL</code> (no covariates to be included).</p></li>
-<li><p><code>FL</code>: Optional (default is <code>False</code>). Set to
-<code>True</code> to use Freedman-Lane procedure to account for
-dependence between covariates in permutation.</p></li>
-<li><p><code>n_perm</code>: Optional (default is <code>999</code>, with
-smallest possible p-value of 1/1000).</p></li>
-</ul>
-</div>
-<div
-id="step-3-load-network-labels-e.g.-network_labels-array-shaped-as-a-binary-array-with-p-elements-each-corresponding-to-an-image-location-with-value-1-corresponding-to-the-networkregion-of-interest-and-0-corresponding-to-locations-outside-the-network-of-interest."
-class="section level5">
-<h5>Step 3: Load network labels (e.g., <code>network_labels</code>
-array), shaped as a binary array with <code>P</code> elements, each
-corresponding to an image location, with value 1 corresponding to the
-network/region of interest and 0 corresponding to locations outside the
-network of interest.</h5>
-</div>
-<div
-id="step-4-apply-nest-to-test-enrichment-of-brain-phenotype-associations-in-specified-network."
-class="section level5">
-<h5>Step 4: Apply NEST to test enrichment of brain-phenotype
-associations in specified network.</h5>
-<pre class="python"><code>output = nest(statFun=&#39;lm&#39;,args=args_lm,net_maps=network_labels)
-
-print(&#39;p-value:&#39;, output[0])
-
-# output[0]: p-value
-# output[1]: observed enrichment score
-# output[2]: enrichment scores for null distribution</code></pre>
-</div>
-<div id="python-code-is-available-here." class="section level5">
-<h5>Python code is available <a
-href="https://github.com/smweinst/NEST/blob/main/Python/example.ipynb">here</a>.</h5>
-</div>
+<div id="tutorial-in-python-is-available-here." class="section level4">
+<h4>Tutorial in python is available <a
+href="https://github.com/smweinst/NEST/blob/main/Python/example.ipynb">here</a>.</h4>
+<!-- ##### Step 1: import the NEST package after the installation. -->
+<!-- ```{python, include = T, eval = F, python.reticulate = F} -->
+<!-- from nest-sw import nest -->
+<!-- ``` -->
+<!-- ##### Step 2: Preparing the data and define the following dictionary of arguments passed to the nest method. The args can be defined as follows, assuming vertex-wise linear models will be fit to estimate local brain-phenotype associations (i.e., specifying `statFun='lm'` in step 4.). -->
+<!-- ```{python, include = T, eval = F, python.reticulate = F} -->
+<!-- args_lm = { -->
+<!--     'X': data, -->
+<!--     'y': phenotype, -->
+<!--     'Z': covariate,  -->
+<!--     'FL': False, -->
+<!--     'n_perm': 999 -->
+<!-- } -->
+<!-- ``` -->
+<!-- Arguments to be included for `statFun='lm'`:  -->
+<!-- - `X`: *N* x *P* matrix (numpy array) of *P* imaging features (e.g., vertices) for *N* participants -->
+<!-- - `y`: *N*-dimensional vector of phenotype of interest (i.e., testing enrichment of *X*-*y* associations) -->
+<!-- - `Z`: Optional. Specify one or more covariates (matrix with N rows and *q* columns for *q* covariates). Default is `NULL` (no covariates to be included). -->
+<!-- - `FL`: Optional (default is `False`). Set to `True` to use Freedman-Lane procedure to account for dependence between covariates in permutation. -->
+<!-- - `n_perm`: Optional (default is `999`, with smallest possible p-value of 1/1000). -->
+<!-- ##### Step 3: Load network labels (e.g., `network_labels` array), shaped as a binary array with `P` elements, each corresponding to an image location, with value 1 corresponding to the network/region of interest and 0 corresponding to locations outside the network of interest. -->
+<!-- ##### Step 4: Apply NEST to test enrichment of brain-phenotype associations in specified network. -->
+<!-- ```{python, include = T, eval = F, python.reticulate = F} -->
+<!-- output = nest(statFun='lm',args=args_lm,net_maps=network_labels) -->
+<!-- print('p-value:', output[0]) -->
+<!-- # output[0]: p-value -->
+<!-- # output[1]: observed enrichment score -->
+<!-- # output[2]: enrichment scores for null distribution -->
+<!-- ``` -->
+<!-- ##### Python code is available [here](https://github.com/smweinst/NEST/blob/main/Python/example.ipynb). -->
 </div>
 </div>
 <div id="nest-in-r" class="section level3">
-<h3><a href="https://github.com/smweinst/NEST/tree/main/R">NEST in
-R</a></h3>
+<h3>NEST in R</h3>
 <p><em>Installation in R:</em></p>
 <pre class="r"><code>if (!require(devtools)){
   install.packages(&quot;devtools&quot;)
 }
 devtools::install_github(&quot;smweinst/NEST&quot;)
 library(NEST)</code></pre>
-<div id="tutorial-in-r" class="section level4">
-<h4>Tutorial in R</h4>
-<p>[in progress]</p>
+<div id="source-code-in-r-is-available-here." class="section level4">
+<h4>Source code in R is available <a
+href="https://github.com/smweinst/NEST/tree/main/R">here</a>.</h4>
+</div>
+<div id="tutorial-in-r-in-progress-check-back-soon."
+class="section level4">
+<h4>Tutorial in R (in progress – check back soon!).</h4>
 </div>
 </div>
 </div>
