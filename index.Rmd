@@ -35,12 +35,12 @@ Feel free to reach out with any comments/questions!
 First install dependents:
 
 ```bash
-pip3 install scipy sklearn pandas matplotlib nibabel nilearn hcp_utils
+pip3 install scipy scikit-learn pandas matplotlib nibabel nilearn hcp_utils
 ```
 
 Then install NEST:
 ```{python, include = T, eval = F, python.reticulate = F}
-pip install NEST
+pip install nest-sw
 ```
 
 #### Source code in python is available [here](https://github.com/smweinst/NEST/tree/main/Python).
