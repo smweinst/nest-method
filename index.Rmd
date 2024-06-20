@@ -28,7 +28,7 @@ Software contributors:
 
 Feel free to reach out with any comments/questions!  
 
-### NEST in python
+### NEST in Python
 
 *Installation from command line*:
 
@@ -102,4 +102,4 @@ library(NEST)
 ```
 
 #### Source code in R is available [here](https://github.com/smweinst/NEST/tree/main/R).
-#### Tutorial in R (in progress -- check back soon!).
+#### Tutorial in R is available [here](https://github.com/smweinst/NEST/tree/main/R/readme.md).
